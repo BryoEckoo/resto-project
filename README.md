@@ -1,24 +1,23 @@
-# resto-project
+## Restaurant Manager
+A website that manages restaurants, developed using vue framework with javascript
 
-## Project setup
-```
-npm install
-```
+## Tools used
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+HTML CSS Javascript vueframework 
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Image in project
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Alt text](project.PNG "Brian Rono") 
+
+## Built By
+
+This project is built and shared by
+
+- Brian Rono
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at chikoe26@gmail.com
+
