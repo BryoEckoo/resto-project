@@ -4,22 +4,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import LogIn from "./components/LogIn.vue";
 
 const routes=[
-    {
-        name:'HomePage',
-        component:HomePage,
-        path:'/'
-    },
-    {
-        name:'SignUp',
-        component:SignUp,
-        path:'/sign-up'
-    },
-    {
-        name:'LogIn',
-        component:LogIn,
-        path:'/log-in'
-
-    }
+    {path:'/', name:'HomePage', component:HomePage },
+    {path:'/sign-up', name:'SignUp', component: SignUp },
+    {path:'/log-in', name:'LogIn',component: LogIn }
 
 ];
 
