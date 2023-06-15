@@ -18,4 +18,31 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.logo {
+    width:300px
+}
+
+.register input {
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid skyblue;
+}
+
+.signupbtn{
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    background: skyblue;
+    color: white;
+    border: 1px solid skyblue;
+}
 </style>
