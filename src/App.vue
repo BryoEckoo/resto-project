@@ -22,7 +22,7 @@ export default {
     width:300px
 }
 
-.register input {
+.register input, .login input {
     width: 300px;
     height: 40px;
     padding-left: 20px;
