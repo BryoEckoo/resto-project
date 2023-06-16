@@ -1,6 +1,20 @@
 ## Restaurant Manager
 A website that manages restaurants, developed using vue framework with javascript
 
+## Setting up and running
+
+1.)Download and open the CMD in that folder
+
+2.)Make run "$npm run serve" in the terminal
+
+3.)Copy the link provided and run it in your browser
+
+4.)Go to the db folder in component/db and open CMD in that specific path
+
+5.)Run "$ json-server --watch db.json " command to open the json server
+
+6.)Register and use the application
+
 ## Tools used
 
 HTML CSS Javascript vueframework 
