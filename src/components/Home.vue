@@ -1,33 +1,43 @@
 <template>
     <Header />
-    <h1>Hello k {{user}}, Welcome To Home Page</h1>
+    <h1>Hello {{userName}}, Welcome To Home Page</h1>
 </template>
 
-<script>
+<script> 
+ 
 import Header from './Header.vue'
 import axios from "axios"
 export default {
     name:'HomePage',
     data(){
         return {
-            name:''
-        }
+            userName:''
+        };
     },
+    created() {
+        this.fetchUserName();  // Fetch the user's name when the component is created
+    },
+
+    
     components:{
         Header
     },
     methods: {
-        fetchData() {
-        axios.get(`http://localhost:3000/users`)
+        fetchUserName() {
+            //retrieve user's name from server
+            const userMe = {name:this.name};
+            axios.get('http://localhost:3000/users', {params: userMe})
         .then(response => {
-          this.name = response.user;
+            if (response.data.length > 0) {
+                this.userName = response.data[0].name; // Assign the user's name to the userName property
+            }
         })
         .catch(error => {
-          console.error('Error fetching data:', error);
+          console.error('Error fetching user name:', error);
         });
     }
-    },
-    mounted()
+    }
+    /**mounted()
     {
         let user= localStorage.getItem('user-info');
         this.name =  axios.get(`http://localhost:3000/users`)
@@ -38,6 +48,6 @@ export default {
         {
             this.$router.push({name:'SignUp'})
         }
-    }
+    }**/
 }
 </script>
