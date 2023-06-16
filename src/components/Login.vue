@@ -27,9 +27,8 @@ export default {
 
             if(result.status==200)
             {
-                //localStorage.setItem("user-info",JSON.stringify(result.data[0]))
+                localStorage.getItem("user-info",JSON.stringify(result.data[0]))
                 this.$router.push({name:'HomePage'})
-                alert('there was some problem');
             }
         }
     }
