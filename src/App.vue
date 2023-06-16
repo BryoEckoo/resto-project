@@ -47,5 +47,6 @@ body {
     background: skyblue;
     color: white;
     border: 1px solid skyblue;
+    cursor: pointer;
 }
 </style>
