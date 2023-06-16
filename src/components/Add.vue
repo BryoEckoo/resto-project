@@ -6,7 +6,7 @@
 <script>
 import Header from './Header.vue'
 export default {
-    name:'HomePage',
+    name:'AddPage',
     components:{
         Header
     },
