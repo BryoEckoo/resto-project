@@ -1,6 +1,12 @@
 <template>
     <Header />
     <h1>Hello {{userName}}, Welcome To Home Page</h1>
+    <table>
+        <tr v-for="item in restaurant" :key="item.id">
+            <td>hello</td>
+            <td>{{ item.name }}</td>
+        </tr>
+    </table>
 </template>
 
 <script> 
@@ -11,7 +17,8 @@ export default {
     name:'HomePage',
     data(){
         return {
-            userName:''
+            userName:'',
+            restaurants:[],
         };
     },
     created() {
@@ -36,10 +43,10 @@ export default {
           console.error('Error fetching user name:', error);
         });
     }
-    }
-    /**mounted()
+    },
+    async mounted()
     {
-        let user= localStorage.getItem('user-info');
+        /**let user= localStorage.getItem('user-info');
         this.name =  axios.get(`http://localhost:3000/users`)
         .then(response => {
           this.name = response.user;
@@ -47,7 +54,10 @@ export default {
         if(user)
         {
             this.$router.push({name:'SignUp'})
-        }
-    }**/
+        }**/
+        let result = await axios.get('http://localhost:3000/restaurants');
+        console.warn(result)
+        this.restaurant = result.data;
+    }
 }
 </script>
