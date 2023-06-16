@@ -1,100 +1,24 @@
 {
   "users": [
     {
-      "name": "john",
-      "email": "john@gmail.com",
-      "password": "john123",
-      "id": "1"
-    },
-    {
-      "name": "brian",
-      "email": "rono",
-      "password": "jjbjb",
-      "id": "aPOvs0j"
-    },
-    {
-      "name": "brian",
-      "email": "rono",
-      "password": "jjbjb",
-      "id": "s8F42jx"
-    },
-    {
-      "name": "brian",
-      "email": "brian@gmail.com",
-      "password": "brian1234",
-      "id": "9vbpi2A"
-    },
-    {
-      "name": "jih h h",
-      "email": "cnnn@gmail.com",
-      "password": "njincn",
-      "id": "5JCJ2dC"
-    },
-    {
-      "name": "brian k rono",
-      "email": "chikoe26@gmail.com",
-      "password": "brayo2345",
-      "id": "W3JcsJC"
-    },
-    {
-      "name": "bicbibi",
-      "email": "cnnn@gmail.com",
-      "password": "njincn",
-      "id": "UqVidjD"
-    },
-    {
-      "name": "jjdjc",
-      "email": "newno",
-      "password": "nene",
-      "id": "-QjtO5t"
-    },
-    {
-      "name": "brian",
-      "email": "koech@gmail.com",
-      "password": "chikoe",
-      "id": "NodC7zh"
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": "TPUMQnS"
-    },
-    {
-      "name": "john keter",
-      "email": "keter@gmail.com",
-      "password": "1234",
-      "id": "Qbx6Q9c"
-    },
-    {
-      "name": "jbjbcba",
-      "email": "koech@gmail.com",
-      "password": "chikoe",
-      "id": "11tdbUd"
-    },
-    {
-      "name": "k",
-      "email": "k",
-      "password": "k",
-      "id": "TQ9WZt8"
-    },
-    {
-      "name": "n",
-      "email": "n",
-      "password": "n",
-      "id": "Z5A6d0D"
-    },
-    {
-      "name": "m",
+      "name": "yobra",
       "email": "m",
       "password": "m",
-      "id": "POdGMo8"
+      "id": 1
     },
     {
-      "name": "o",
-      "email": "o",
-      "password": "o",
-      "id": "YOvEzla"
+      "name": "kevo",
+      "email": "s",
+      "password": "s",
+      "id": 2
+    }
+  ],
+  "restaurants":[
+    {
+      "id":1,
+      "name":"burger king",
+      "contact":1111,
+      "address":"Nairobi along jogoo road"
     }
   ]
 }
