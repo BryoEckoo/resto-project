@@ -13,7 +13,7 @@
 import axios from 'axios'
 export default {
     name:'LogIn',
-    data()
+    Data()
     {
         return{
             email:'',
@@ -21,15 +21,23 @@ export default {
         }
     },
     methods:{
-        async login()
-        {
-            let result = await axios.get(`http://localhost:3000/users?email=${this.email}&passwords=${this.password}`)
-
-            if(result.status==200)
-            {
-                //localStorage.getItem("user-info",JSON.stringify(result.data[0]))
-                this.$router.push({name:'HomePage'})
-            }
+        async login(){
+            const loginData = {
+                email: this.email,
+                password: this.password
+            };
+            //verify user from server
+            axios.get('http://localhost:3000/users', { params: loginData})
+            .then(response => {
+          if (response.data.length > 0) {
+            this.$router.push('/'); // Redirect to the Home page after successful login
+          } else {
+            console.log('Invalid credentials'); // Show error message for invalid credentials
+          }
+        })
+        .catch(error => {
+          console.error('Error verifying user:', error);
+        });
         }
     }
 };
