@@ -6,7 +6,7 @@
         <input type="text" v-model="email" placeholder="Enter Your Email" />
         <input type="password" v-model="password" placeholder="Enter Your Password" />
         <button v-on:click="signup" class="signupbtn">Sing Up</button>
-        <p class="loginbtn"><router-link to="/log-in">Login</router-link></p>
+        <router-link to="/log-in">Login</router-link>
     </div>
 </template>
 <script>
@@ -19,34 +19,33 @@ export default {
             name:'',
             email:'',
             password:''
-        }
+        };
     },
     methods:{
-        async signup()
-        {
-            let result = await axios.post("http://localhost:3000/users",{
+        async signup() {
+            const userData = {
                 name:this.name,
                 email:this.email,
                 password:this.password
-            });
-
-            console.warn(result);
-            if(result.status==201)
-            {
-                localStorage.setItem("user-info",JSON.stringify(result.data))
-                this.$router.push({name:'HomePage'})
-            }
+            };
+        //Save user data to the JSON server    
+        axios.post("http://localhost:3000/users", userData)
+        .then(() => {
+          this.$router.push('/'); // Redirect to the Login page after successful sign up
+        })
+        .catch(error => {
+            console.error('Error saving user data:', error);
+        });
         }
-
     },
-    mounted()
+    /**mounted()
     {
         let user=localStorage.getItem('user-info');
         if(user)
         {
             this.$router.push({name:'HomePage'})
         }
-    }
+    }**/
 }
 </script>
 
