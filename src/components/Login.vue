@@ -25,7 +25,7 @@ export default {
         {
             let result = await axios.get(`http://localhost:3000/users?email=${this.email}&passwords=${this.password}`)
 
-            if(result.status==304 && result.data.lenght>0)
+            if(result.status==200 && result.data.lenght>0)
             {
                 //localStorage.setItem("user-info",JSON.stringify(result.data[0]))
                 this.$router.push({name:'Home'})
