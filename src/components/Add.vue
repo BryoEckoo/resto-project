@@ -2,10 +2,10 @@
     <Header />
     <h1>Hello User, Welcome Add Page</h1>
     <form class="add">
-        <input type="text" name="name" placeholder="Enter Name" />
-        <input type="text" name="address" placeholder="Enter Address" />
-        <input type="text" name="contact" placeholder="Enter Contact" />
-        <button>Add Restaurant</button>
+        <input type="text" name="name" placeholder="Enter Name" v-model="restaurant.name" />
+        <input type="text" name="address" placeholder="Enter Address" v-model="restaurant.address" />
+        <input type="text" name="contact" placeholder="Enter Contact" v-model="restaurant.contact" />
+        <button v-on:click.prevent="addRestaurant">Add Restaurant</button>
     </form>
 </template>
 
@@ -15,6 +15,23 @@ export default {
     name:'AddPage',
     components:{
         Header
+    },
+    data(){
+        return {
+            restaurant :{
+                name:'',
+                address:'',
+                contact:''
+            }
+        }
+
+    },
+    methods:{
+        addRestaurant()
+        {
+            console.warn(this.restaurant)
+        }
+
     },
     mounted()
     {
