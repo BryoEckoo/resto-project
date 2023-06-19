@@ -40,6 +40,7 @@ export default {
             this.restaurant.name = '';
             this.restaurant.address = '';
             this.restaurant.contact = '';
+            this.$router.push({ name: 'HomePage' });
         }
 
     },
