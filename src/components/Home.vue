@@ -17,7 +17,11 @@
                 <td>{{ item.name }}</td>
                 <td>{{ item.contact }}</td>
                 <td>{{ item.address }}</td>
-                <td><router-link :to="'/update/' + item.id">Update</router-link></td>
+                <td class="td">
+                    <button class="update"><router-link :to="'/update/' + item.id">Update</router-link></button>
+                    <button class="delete" @click="deleteRestaurant(item.id)">Delete</button>
+                </td>
+                
         </tr>
         </tbody>
         
@@ -70,6 +74,22 @@ export default {
         });
 
     },
+    async fetchRestaurants() {
+            try {
+                const response = await axios.get('http://localhost:3000/restaurants');
+                this.restaurants = response.data;
+            } catch (error) {
+                console.error(error);
+            }
+        },
+    async deleteRestaurant(id) {
+            try {
+                await axios.delete(`http://localhost:3000/restaurants/${id}`);
+                await this.fetchRestaurants();
+            } catch (error) {
+                console.error(error);
+            }
+        }
 
    /** fetchData() {
             axios.get('http://localhost:3000/restaurants')
@@ -88,4 +108,19 @@ td{
     width:160px;
     height:40px;
 }
+.delete, .update {
+    width: 100px;
+    height: 30px;
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    background: skyblue;
+    color: white;
+    border: 1px solid skyblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 </style>
