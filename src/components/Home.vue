@@ -1,11 +1,24 @@
 <template>
     <Header />
     <h1>Hello {{userName}}, Welcome To Home Page</h1>
-    <table>
-        <tr v-for="item in restaurant" :key="item.id">
-            <td>hello</td>
-            <td>{{ item.name }}</td>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item in restaurants" :key="item.id">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.contact }}</td>
+                <td>{{ item.address }}</td>
         </tr>
+        </tbody>
+        
     </table>
 </template>
 
@@ -18,16 +31,24 @@ export default {
     data(){
         return {
             userName:'',
-            restaurants:[],
+            restaurants:[]
         };
     },
     created() {
         this.fetchUserName();  // Fetch the user's name when the component is created
     },
-
-    
     components:{
         Header
+    },
+    async mounted() {
+        try {
+            const response = await axios.get('http://localhost:3000/restaurants');
+            this.restaurants = response.data;
+            console.log(this.restaurant.id)
+        } catch (error) {
+            console.error(error);
+        }
+
     },
     methods: {
         fetchUserName() {
@@ -42,22 +63,24 @@ export default {
         .catch(error => {
           console.error('Error fetching user name:', error);
         });
-    }
+
     },
-    async mounted()
-    {
-        /**let user= localStorage.getItem('user-info');
-        this.name =  axios.get(`http://localhost:3000/users`)
-        .then(response => {
-          this.name = response.user;
+
+   /** fetchData() {
+            axios.get('http://localhost:3000/restaurants')
+                .then(response => {
+                    this.restaurant = response.data;
+        })
+        .catch(error => {
+          console.error(error);
         });
-        if(user)
-        {
-            this.$router.push({name:'SignUp'})
         }**/
-        let result = await axios.get('http://localhost:3000/restaurants');
-        console.warn(result)
-        this.restaurant = result.data;
     }
 }
 </script>
+<style>
+td{
+    width:160px;
+    height:40px;
+}
+</style>
