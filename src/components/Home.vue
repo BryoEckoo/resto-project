@@ -109,7 +109,7 @@ td{
     height:40px;
 }
 .delete, .update {
-    width: 100px;
+    width: 200px;
     height: 30px;
     padding-left: 20px;
     display: block;
@@ -121,6 +121,7 @@ td{
     border: 1px solid skyblue;
     cursor: pointer;
     text-decoration: none;
+    
 }
 
 </style>

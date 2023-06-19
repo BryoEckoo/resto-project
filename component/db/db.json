@@ -65,6 +65,18 @@
       "email": "edward@gmail.com",
       "password": "1234",
       "id": 11
+    },
+    {
+      "name": "u",
+      "email": "u",
+      "password": "u",
+      "id": 12
+    },
+    {
+      "name": "r",
+      "email": "r",
+      "password": "r",
+      "id": 13
     }
   ],
   "restaurants": [
@@ -81,22 +93,10 @@
       "address": "Nairobi along jogoo road"
     },
     {
-      "name": "op",
-      "address": "fgvgvv ",
-      "contact": "0765468",
-      "id": 3
-    },
-    {
       "name": "salama hotel",
       "address": "eldoret khetias",
       "contact": "07222222",
       "id": 4
-    },
-    {
-      "name": "v",
-      "address": "c",
-      "contact": "s",
-      "id": 5
     }
   ]
 }
