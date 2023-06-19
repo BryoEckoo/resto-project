@@ -11,14 +11,20 @@
       "email": "s",
       "password": "s",
       "id": 2
+    },
+    {
+      "name": "o",
+      "email": "o",
+      "password": "o",
+      "id": 3
     }
   ],
-  "restaurants":[
+  "restaurants": [
     {
-      "id":1,
-      "name":"burger king",
-      "contact":1111,
-      "address":"Nairobi along jogoo road"
+      "id": 1,
+      "name": "burger king",
+      "contact": 1111,
+      "address": "Nairobi along jogoo road"
     }
   ]
 }
