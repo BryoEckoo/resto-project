@@ -25,7 +25,7 @@ body {
     width:300px
 }
 
-.register input, .login input {
+.register input, .login input, .add input{
     width: 300px;
     height: 40px;
     padding-left: 20px;
@@ -36,7 +36,7 @@ body {
     border: 1px solid skyblue;
 }
 
-.signupbtn{
+.signupbtn, .add button{
     width: 300px;
     height: 40px;
     padding-left: 20px;
