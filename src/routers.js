@@ -8,7 +8,7 @@ const routes=[
     {path:'/', name:'HomePage', component:HomePage },
     {path:'/sign-up', name:'SignUp', component: SignUp },
     {path:'/log-in', name:'LogIn',component: LogIn },
-    {path:'/update', name:'UpdatePage',component: UpdatePage },
+    {path:'/update/:id', name:'UpdatePage',component: UpdatePage },
     {path:'/add', name:'AddPage',component: AddPage },
 ];
 
