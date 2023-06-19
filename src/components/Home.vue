@@ -58,6 +58,9 @@ export default {
         .then(response => {
             if (response.data.length > 0) {
                 this.userName = response.data[0].name; // Assign the user's name to the userName property
+                console.log(this.userName);
+            }else{
+                this.userName = '';
             }
         })
         .catch(error => {
