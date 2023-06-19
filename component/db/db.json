@@ -17,6 +17,36 @@
       "email": "o",
       "password": "o",
       "id": 3
+    },
+    {
+      "name": "",
+      "email": "koech@gmail.com",
+      "password": "chikoe",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "koech@gmail.com",
+      "password": "chikoe",
+      "id": 5
+    },
+    {
+      "name": "o",
+      "email": "0",
+      "password": "0",
+      "id": 6
+    },
+    {
+      "name": "o",
+      "email": "o",
+      "password": "o",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "o",
+      "password": "o",
+      "id": 8
     }
   ],
   "restaurants": [
@@ -25,6 +55,18 @@
       "name": "burger king",
       "contact": 1111,
       "address": "Nairobi along jogoo road"
+    },
+    {
+      "id": 2,
+      "name": "burger king",
+      "contact": 2222,
+      "address": "Nairobi along jogoo road"
+    },
+    {
+      "name": "b",
+      "address": "3",
+      "contact": "5",
+      "id": 3
     }
   ]
 }

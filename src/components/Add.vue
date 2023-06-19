@@ -1,6 +1,6 @@
 <template>
     <Header />
-    <h1>Hello User, Welcome Add Page</h1>
+    <h1>Hello, Welcome Add Page</h1>
     <form class="add">
         <input type="text" name="name" placeholder="Enter Name" v-model="restaurant.name" />
         <input type="text" name="address" placeholder="Enter Address" v-model="restaurant.address" />
@@ -11,6 +11,7 @@
 
 <script>
 import Header from './Header.vue'
+import axios from 'axios'
 export default {
     name:'AddPage',
     components:{
@@ -27,9 +28,18 @@ export default {
 
     },
     methods:{
-        addRestaurant()
+        async addRestaurant()
         {
             console.warn(this.restaurant)
+            const response = await axios.post('http://localhost:3000/restaurants',{
+                name:this.restaurant.name,
+                address:this.restaurant.address,
+                contact:this.restaurant.contact
+            });
+            console.warn("result", response.data)
+            this.restaurant.name = '';
+            this.restaurant.address = '';
+            this.restaurant.contact = '';
         }
 
     },
